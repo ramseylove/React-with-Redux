@@ -1,0 +1,1 @@
+## Parent directory for all projects created in Udemy course Modern React with Redux.

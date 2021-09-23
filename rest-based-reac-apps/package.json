@@ -1,0 +1,14 @@
+{
+  "name": "rest-based-reac-apps",
+  "version": "1.0.0",
+  "description": "Project for Section 24 REST-BASED React Apps",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server -p 3100 -w db.json"
+  },
+  "author": "rv",
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "^0.16.3"
+  }
+}

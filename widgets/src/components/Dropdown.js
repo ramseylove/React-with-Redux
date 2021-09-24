@@ -6,13 +6,18 @@ const Dropdown = ({options, selected, onSelectedChange}) => {
     const ref = useRef()
 
     useEffect(() => {
-        document.body.addEventListener('click',(event)=> {
+        const dropdownListener = (event) => {
             // console.log(event.target)
-            if (ref.current.contains(event.target)) {
+            if (ref.current && ref.current.contains(event.target)) {
                 return
             }
             setShowDropdown(false)
-        })
+        }
+        document.body.addEventListener('click', dropdownListener, {capture: true})
+
+        return () => {
+            document.body.removeEventListener('click', dropdownListener)
+        }
     }, [])
 
     const renderedOptions = options.map((option) => {

@@ -1,3 +1,14 @@
 {
-    "streams": []
+  "streams": [
+    {
+      "title": "the one and only stream",
+      "description": "greatest of all time",
+      "id": 1
+    },
+    {
+      "title": "streamyboy",
+      "description": "happpy stream",
+      "id": 2
+    }
+  ]
 }

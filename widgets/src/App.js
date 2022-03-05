@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Route from "./components/Route";
 // import Count from "./components/Count";
 import Search from "./components/Search";
+import SelectMenu from "./components/SelectMenu";
 import Translator from "./components/Translator";
 
 const items = [
@@ -24,44 +25,46 @@ const items = [
 
 const options = [
   {
-    label: 'the color red',
-    value: 'red'
+    label: "the color red",
+    value: "red",
   },
   {
-    label: 'the color green',
-    value: 'green'
+    label: "the color green",
+    value: "green",
   },
   {
-    label: 'the color blue',
-    value: 'blue'
-  }
-]
+    label: "the color blue",
+    value: "blue",
+  },
+];
 
 const App = () => {
-  const [selected, setSelected] = useState(options[0])
-  
+  const [selected, setSelected] = useState(options[0]);
 
   return (
     <div>
       <Header />
-        <Route path="/" >
-          <Accordion items={items} />
-        </Route>
-        <Route path="/dropdown">
-          <Dropdown 
+      <Route path="/">
+        <Accordion items={items} />
+      </Route>
+      <Route path="/dropdown">
+        <Dropdown
           label="Select a color"
           options={options}
           selected={selected}
           onSelectedChange={setSelected}
-          />
-        </Route>
-        <Route path="/translator">
-          <Translator />
-        </Route>
-        <Route path="/search">
-          <Search />
-        </Route>
-      
+        />
+      </Route>
+      <Route path="/translator">
+        <Translator />
+      </Route>
+      <Route path="/search">
+        <Search />
+      </Route>
+      <Route path="/selectMenu">
+        <SelectMenu />
+      </Route>
+
       {/* <Search /> */}
       {/* <Count count={count} onClick={countButtonHandler} onBackButtonClick={backButtonHandler}/> */}
     </div>
